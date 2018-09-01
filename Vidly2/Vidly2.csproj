@@ -355,13 +355,12 @@
     <Content Include="Scripts\popper-utils.js.map" />
     <Content Include="Views\Customer\Index.cshtml" />
     <Content Include="Views\Customer\Show.cshtml" />
-    <Content Include="Views\Movies\Index.cshtml" />
-    <Content Include="Views\Movies\Show.cshtml" />
+    <Content Include="Views\Movie\Index.cshtml" />
+    <Content Include="Views\Movie\Show.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
     <Folder Include="Views\Customers\" />
-    <Folder Include="Views\Movie\" />
     <Folder Include="Views\Test\" />
   </ItemGroup>
   <ItemGroup>
