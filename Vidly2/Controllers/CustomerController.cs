@@ -58,11 +58,27 @@ namespace Vidly2.Controllers
         }
     
         [HttpPost]
-        public ActionResult Add(Customer customer)
+        public ActionResult Save(Customer customer)
         {
-            _context.Customers.Add(customer);
-            _context.SaveChanges();
+            if(customer.Id == 0)
+                _context.Customers.Add(customer);
+            else
+            {
+                var customerInDb = _context.Customers.Single(c => c.Id == customer.Id);
 
+                // Using Automapper to maps data automatically.
+                // To able to update a specific column, create a new class called Data Transfer Object. Example UpdateCustomerDto
+
+                customerInDb.Name = customer.Name;
+                customerInDb.Birthdate = customer.Birthdate;
+                customerInDb.MembershipTypeId = customer.MembershipTypeId;
+                customerInDb.isSubscribeNewsLetter = customer.isSubscribeNewsLetter;
+
+                // Do not use this approach, this will enable security holes.
+                // TryUpdateModel(customerInDb, "", new string[] { "Name", "Email" });
+            }
+
+            _context.SaveChanges();
             return RedirectToAction("Index", "Customer");
         }
 
