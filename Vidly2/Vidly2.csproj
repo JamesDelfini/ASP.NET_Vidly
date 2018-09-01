@@ -226,6 +226,10 @@
     <Compile Include="Migrations\201809010557185_populateName_MembershipType.Designer.cs">
       <DependentUpon>201809010557185_populateName_MembershipType.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\201809010610400_NewColumnBirthdate_Customer.cs" />
+    <Compile Include="Migrations\201809010610400_NewColumnBirthdate_Customer.Designer.cs">
+      <DependentUpon>201809010610400_NewColumnBirthdate_Customer.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\AccountViewModels.cs" />
     <Compile Include="Models\Customer.cs" />
@@ -369,6 +373,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\201809010557185_populateName_MembershipType.resx">
       <DependentUpon>201809010557185_populateName_MembershipType.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201809010610400_NewColumnBirthdate_Customer.resx">
+      <DependentUpon>201809010610400_NewColumnBirthdate_Customer.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <ItemGroup>

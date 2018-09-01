@@ -6,4 +6,11 @@
 
 <h2>Customer Details</h2>
 <p>@Model.Name</p>
+<ul>
+    <li>Membership Type: @Model.MembershipType.Name</li>
+    @if (Model.Birthdate != null)
+    {
+        <li>Birthdate: @Model.Birthdate</li>
 
+    }
+</ul>
