@@ -10,9 +10,11 @@ namespace Vidly2.Models
     public class Movies
     {
         public int Id { get; set; }
+        public Genre Genre { get; set; }
+        public byte GenreId { get; set; }
         [Required]
         [StringLength(255)]
-        public string Name { get; set; }
+        public string Title { get; set; }
         [Column(TypeName = "Date")]
         public DateTime ReleaseDate { get; set; }
         [Column(TypeName = "Date")]

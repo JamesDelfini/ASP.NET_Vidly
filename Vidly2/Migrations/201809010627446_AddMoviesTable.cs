@@ -12,7 +12,7 @@ namespace Vidly2.Migrations
                 c => new
                     {
                         Id = c.Int(nullable: false, identity: true),
-                        Name = c.String(nullable: false, maxLength: 255),
+                        Title = c.String(nullable: false, maxLength: 255),
                         ReleaseDate = c.DateTime(nullable: false, storeType: "date"),
                         DatePublish = c.DateTime(storeType: "date"),
                         Stock = c.Int(nullable: false),
