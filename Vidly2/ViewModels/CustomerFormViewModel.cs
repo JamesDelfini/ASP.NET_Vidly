@@ -5,7 +5,7 @@ using System.Web;
 using Vidly2.Models;
 namespace Vidly2.ViewModels
 {
-    public class CustomerFormView
+    public class CustomerFormViewModel
     {
         /* Difference between using IEnumerable and List<> is using for 
          * read-only data, only use when iterating a collection of data.
