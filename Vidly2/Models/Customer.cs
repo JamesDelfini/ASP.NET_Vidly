@@ -10,13 +10,20 @@ namespace Vidly2.Models
     public class Customer
     {
         public int Id { get; set; }
+
         [Required]
         [StringLength(255)]
         public string Name { get; set; }
+
+        [Display(Name="Date of Birth")]
         [Column(TypeName="Date")]
         public DateTime? Birthdate { get; set; }
+
+        [Display(Name="Subscribe to Newsletter")]
         public bool isSubscribeNewsLetter { get; set; }
+
         public MembershipType MembershipType { get; set; }
+
         public byte MembershipTypeId { get; set; }
     }
 }
