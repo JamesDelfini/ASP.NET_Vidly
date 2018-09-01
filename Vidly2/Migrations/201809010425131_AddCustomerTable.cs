@@ -12,7 +12,7 @@ namespace Vidly2.Migrations
                 c => new
                     {
                         Id = c.Int(nullable: false, identity: true),
-                        Name = c.Int(nullable: false),
+                        Name = c.String(),
                         isSubscribeNewsLetter = c.Boolean(nullable: false),
                     })
                 .PrimaryKey(t => t.Id);
