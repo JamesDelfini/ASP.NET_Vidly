@@ -23,7 +23,8 @@ namespace Vidly2.Models
         public bool isSubscribeNewsLetter { get; set; }
 
         public MembershipType MembershipType { get; set; }
-
+        
+        [Display(Name="Membership Type")]
         public byte MembershipTypeId { get; set; }
     }
 }

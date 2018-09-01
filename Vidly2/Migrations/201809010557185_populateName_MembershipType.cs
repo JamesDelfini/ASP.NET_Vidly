@@ -9,8 +9,8 @@ namespace Vidly2.Migrations
         {
             Sql("UPDATE MembershipTypes SET Name = 'Free' WHERE Id = 1");
             Sql("UPDATE MembershipTypes SET Name = 'Monthly' WHERE Id = 2");
-            Sql("UPDATE MembershipTypes SET Name = 'Monthly' WHERE Id = 3");
-            Sql("UPDATE MembershipTypes SET Name = 'Monthly' WHERE Id = 4");
+            Sql("UPDATE MembershipTypes SET Name = 'Quarterly' WHERE Id = 3");
+            Sql("UPDATE MembershipTypes SET Name = 'Annual' WHERE Id = 4");
         }
         
         public override void Down()
