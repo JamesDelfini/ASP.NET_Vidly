@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Data.Entity;
 using System.Linq;
 using System.Web;
 using System.Web.Mvc;
@@ -24,7 +25,13 @@ namespace Vidly2.Controllers
         // GET: Customers
         public ActionResult Index()
         {
-            var customers = _context.Customers.ToList();
+            /* 
+             * Include method is called Eager Loading.
+             * To enable to load related objects.
+             * Import Namespace using System.Data.Entity;
+             * 
+             * */
+            var customers = _context.Customers.Include(c => c.MembershipType).ToList();
             return View(customers);
         }
 

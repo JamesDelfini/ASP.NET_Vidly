@@ -11,10 +11,11 @@
 }
 else
 {
-    <table class="table">
+    <table class="table table-hover">
         <thead>
             <tr>
                 <th scope="col">Customers</th>
+                <th scope="col">Discount Rate</th>
             </tr>
         </thead>
         <tbody>
@@ -22,6 +23,7 @@ else
             { 
                 <tr>
                     <td scope="row">@Html.ActionLink(@customer.Name, "Show", "Customer", new { id = customer.Id }, null)</td>
+                    <td scope="row">@customer.MembershipType.DiscountRate%</td>
                 </tr>
             }
         </tbody>
