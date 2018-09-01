@@ -56,5 +56,11 @@ namespace Vidly2.Controllers
 
             return View(viewModel);
         }
+    
+        [HttpPost]
+        public ActionResult Add(Customer customer)
+        {
+            return View();
+        }
     }
 }

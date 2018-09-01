@@ -5,7 +5,7 @@
 }
 
 <h2>Add Customer</h2>
-@using (Html.BeginForm("Create", "Customer"))
+@using (Html.BeginForm("Add", "Customer"))
 {
     <div class="form-group">
         @Html.LabelFor(m => m.Customer.Name)
@@ -26,5 +26,6 @@
         @Html.LabelFor(m => m.Customer.MembershipTypeId)
         @Html.DropDownListFor(m => m.Customer.MembershipTypeId, new SelectList(Model.MembershipTypes, "Id", "Name"), "Select Membership Type", new { @class = "form-control" })
     </div>
+    <button type="submit" class="btn btn-primary">Save</button>
 }
 
