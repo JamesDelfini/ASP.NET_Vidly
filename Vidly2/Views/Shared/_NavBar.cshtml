@@ -8,12 +8,13 @@
     <div class="collapse navbar-collapse" id="navbarContent">
         <ul class="navbar-nav mr-auto">
             <li class="nav-item active">
-                @Html.ActionLink("Customers", "Index", "Customers", null, new { @class="nav-link"})
+                @Html.ActionLink("Customers", "Index", "Customers", null, new { @class = "nav-link" })
             </li>
 
             <li class="nav-item">
-                @Html.ActionLink("Movies", "Index", "Movies", null, new { @class="nav-link" })
+                @Html.ActionLink("Movies", "Index", "Movies", null, new { @class = "nav-link" })
             </li>
         </ul>
+        @Html.Partial("_LoginPartial")
     </div>
 </nav>
