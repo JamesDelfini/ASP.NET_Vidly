@@ -7,16 +7,11 @@
 <h2>Add Customer</h2>
 @using (Html.BeginForm("Save", "Customer"))
 {
+    @Html.ValidationSummary(true, "Please input the required fields.")
     <div class="form-group">
         @Html.LabelFor(m => m.Customer.Name)
         @Html.TextBoxFor(m => m.Customer.Name, new { @class = "form-control" })
         @Html.ValidationMessageFor(m => m.Customer.Name)
-    </div>
-
-    <div class="form-group">
-        @Html.LabelFor(m => m.Customer.Birthdate)
-        @Html.TextBoxFor(m => m.Customer.Birthdate, "{0:d MM yyyy}", new { @class = "form-control" })
-        @Html.ValidationMessageFor(m => m.Customer.Birthdate)
     </div>
 
     <div class="form-group">
@@ -25,6 +20,11 @@
         @Html.ValidationMessageFor(m => m.Customer.MembershipTypeId)
     </div>
 
+    <div class="form-group">
+        @Html.LabelFor(m => m.Customer.Birthdate)
+        @Html.TextBoxFor(m => m.Customer.Birthdate, "{0:d MM yyyy}", new { @class = "form-control" })
+        @Html.ValidationMessageFor(m => m.Customer.Birthdate)
+    </div>
 
     <div class="form-group form-check">
         @Html.CheckBoxFor(m => m.Customer.isSubscribeNewsLetter, new { @class = "form-check-input" })
@@ -35,3 +35,7 @@
     <button type="submit" class="btn btn-primary">Save</button>
 }
 
+@section scripts
+{
+    @Scripts.Render("~/bundles/jqueryval")
+}
