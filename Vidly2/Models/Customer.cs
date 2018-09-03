@@ -17,6 +17,7 @@ namespace Vidly2.Models
 
         [Display(Name="Date of Birth")]
         [Column(TypeName="Date")]
+        [Min18YearsIfAMember]
         public DateTime? Birthdate { get; set; }
 
         [Display(Name="Subscribe to Newsletter")]
