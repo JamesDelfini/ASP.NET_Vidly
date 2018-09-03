@@ -30,6 +30,7 @@ namespace Vidly2.Models
         public DateTime? DatePublish { get; set; }
 
         [Required]
+        [Range(1, 20)]
         public int Stock { get; set; }
     }
 }
