@@ -17,7 +17,7 @@ namespace Vidly2.Dtos
         public string Name { get; set; }
 
         [Column(TypeName = "Date")]
-        [Min18YearsIfAMember]
+        // [Min18YearsIfAMember]
         public DateTime? Birthdate { get; set; }
 
         public bool isSubscribeNewsLetter { get; set; }
